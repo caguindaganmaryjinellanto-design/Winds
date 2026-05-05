@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>College Diary</title>
+    <title>College Diary | Home</title>
     <style>
         * { 
             margin: 0; 
             padding: 0; 
             box-sizing: border-box; 
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+            font-family: system-ui, -apple-system, sans-serif; 
         }
 
         body {
-            /* Adjusted the linear-gradient to use valid RGBA values for a clean overlay */
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/banner.jpg');
+            /* Uses the verbatim filename provided */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('banner.jpg');
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
@@ -23,7 +23,6 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            backdrop-filter: blur(1px);
         }
 
         header {
@@ -36,10 +35,9 @@
         }
 
         .logo {
-            width: 80px; /* Adjusted size for better visibility */
+            width: 80px;
             height: auto;
-            display: block;
-            border-radius: 8px; /* Optional: gives the logo a clean edge */
+            border-radius: 8px;
         }
 
         nav a {
@@ -52,8 +50,7 @@
         }
 
         nav a:hover { 
-            color: #80755a; 
-            text-decoration: underline; 
+            color: #d2b48c; 
         }
 
         section {
@@ -67,40 +64,47 @@
 
         .welcome-container {
             max-width: 800px;
-            background: rgba(75, 54, 33, 0.4); /* Subtle background for text readability */
+            background: rgba(75, 54, 33, 0.6);
             padding: 40px;
             border-radius: 20px;
-            backdrop-filter: blur(5px);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         h2 {
-            font-size: clamp(40px, 10vw, 80px); /* Makes text responsive on mobile */
+            font-size: clamp(32px, 8vw, 70px);
             text-transform: uppercase;
             letter-spacing: 5px;
             margin-bottom: 10px;
-            border-bottom: 8px solid white;
+            border-bottom: 5px solid white;
             display: inline-block;
         }
 
         h3 {
-            font-size: 28px;
+            font-size: 24px;
             font-style: italic;
             margin: 20px 0;
+            color: #d2b48c;
         }
 
         p {
-            font-size: 22px;
+            font-size: 20px;
             line-height: 1.6;
             margin-bottom: 20px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            header { padding: 15px 20px; flex-direction: column; gap: 15px; }
+            nav a { margin: 0 10px; font-size: 16px; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <!-- Pointed the src directly to your uploaded logo file -->
-  <a href="CSTA Campus Entrance.html">
-        <img src="CDLOGO.png" alt="College Diary Logo" class="logo">
+    <a href="index.html">
+        <img src="CDLOGO.png" alt="Logo" class="logo">
     </a>
     <nav>
         <a href="index.html">Home</a>
@@ -114,7 +118,7 @@
 <section>
     <div class="welcome-container">
         <h2>Hello There!</h2>
-        <h3>Welcome to my College Diary!</h3>
+        <h3>Welcome to my College Diary</h3>
         <p>Explore my journey through the world of IT. This diary captures the hardships, the breakthroughs, and everything in between. Glad you're here!</p>
     </div>
 </section>
