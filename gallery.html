@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            font-family: system-ui, -apple-system, sans-serif; 
+        }
+
+        body {
+            background-color: #3C2A21;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #4b3621; 
+            color: white;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        nav a {
+            color: white;
+            margin-left: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        nav a:hover { 
+            color: #D7C0AE; 
+            text-decoration: underline; 
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 50px 20px;
+            flex: 1;
+        }
+
+        .photo-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            width: 300px;
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .photo-card:hover {
+            transform: translateY(-10px) rotate(2deg);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+            border-color: #D7C0AE;
+        }
+
+        .img-wrapper {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .zoom-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-card:active .zoom-img {
+            transform: scale(1.5);
+        }
+
+        .caption { 
+            padding: 15px 5px 5px 5px; 
+            text-align: center;
+        }
+
+        .caption h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: #D7C0AE;
+        }
+
+        .caption p {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Gallery</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="diary.html">Diary</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+   
+    <div class="gallery-container"> <div class="photo-card">
+        <img src="hoho.jpg" class="zoom-img">
+
+        <div class="caption">
+            <h3>Freshman Year</h3>
+        <p style="text-align: center;">First photo of my freshman year.</p>
+        </div>
+    </div>
+
+    <div class="photo-card">
+        <img src="yum.jpg" class="zoom-img">
+        <div class="caption">
+        <h3>Coffee Break</h3>
+        <p style="text-align: center;">Coffee time!</p>
+        </div>
+    </div>
+
+    <div class="photo-card">
+        <img src="SHESH.jpg" class="zoom-img">
+        <div class="caption">
+        <h3>IT Week</h3>
+        <p style="text-align: center; font-size: smaller;" >This was my first time joining the IT Week singing competition, and it was worth it because I won. I got first place☺️</p>
+    </div>
+    </div>
+
+    <div class="photo-card">
+        <img src="me.jpg"  class="zoom-img">
+        <div class="caption">
+        <h3 class="caption h3">The Main Character</h3>
+        <p style="text-align: center;">MEEEEEE!</p>
+        </div>
+    </div>
+
+    <div class="gallery-container"> <div class="photo-card">
+        <img src="yum.jpg" class="zoom-img">
+        <div class="caption">
+            <h3>After church</h3>
+        <p style="text-align: center;">Let's eat! 😋</p>
+    </div>
+    </div>
+
+    <div class="photo-card"> 
+        <img src="love.jpg"  class="zoom-img">
+        <div class="caption">
+            <h3>Hobby</h3>
+        <p style="text-align: center;">I really love to play guitar so much T_T </p>
+    </div>
+    </div>
+
+    <div class="photo-card">
+        <img src="ahah.jpg"  class="zoom-img">
+        <div class="caption">
+            <h3>Bff's</h3>
+        <p style="text-align: center;">This was my birthday celeb. Celebrating with them make me so much happy :) </p>
+   </div>
+    </div>
+
+    <div class="photo-card"> 
+        <img src="cuties.jpg"  class="zoom-img">
+        <div class="caption">
+            <h3>DVBS</h3>
+        <p style="text-align: center;">With these little cuties 🥹</p>
+    </div>
+    </div>
+
+    <div class="photo-card"> 
+        <img src="benny.jpg"  class="zoom-img">
+        <div class="caption">
+            <h3></h3>
+        <p style="text-align: center;"></p>
+    </div>
+</div>
+    
+    <div class="photo-card"> 
+        <img src="arduino.jpg" class="zoom-img">
+        <div class="caption">
+            <h3>AppDev Project</h3>
+        <p style="text-align: center;">One of the unforgettable moments of 2nd sem.</p>
+    </div>
+</div>
+
+    <div class="photo-card"> 
+        <img src="flim.jpg" class="zoom-img">
+        <div class="caption">
+            <h3>Lights, Camera, Action!</h3>
+        <p style="text-align: center;">Moments while filming our final exam in Philippine Literature.</p>
+    </div>
+</div>
+
+
+</body>
+</html>

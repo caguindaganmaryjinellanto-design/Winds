@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My College Diary</title>
+    <style>
+        /* 1. Global Reset */
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        }
+
+        body {
+            /* Using the high-quality desk background from your screenshots */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('porpek.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            min-height: 100vh;
+            color: #f5f5f5;
+        }
+
+        :root {
+            --primary-brown: #3C2A21;
+            --glass-bg: rgba(141, 110, 99, 0.25);
+            --inner-card: rgba(255, 255, 255, 0.15);
+        }
+
+        /* 2. Header & Nav */
+        header {
+            background-color: var(--primary-brown); 
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        /* 3. Diary Container - Matching your screenshot layout */
+        .main-content {
+            padding: 50px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .outer-frame {
+            background-color: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 30px;
+            padding: 40px;
+            max-width: 900px;
+            width: 100%;
+            margin-bottom: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .diary-card {
+            background-color: var(--inner-card);
+            border-radius: 20px;
+            padding: 40px;
+            position: relative;
+            text-align: center;
+        }
+
+        .date-badge {
+            position: absolute;
+            top: -55px;
+            left: -20px;
+            background-color: rgba(60, 42, 33, 0.8);
+            padding: 8px 25px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+        }
+
+        h3 { font-size: 1.8rem; margin-bottom: 10px; }
+        .intro-text { margin-bottom: 20px; font-size: 1.1rem; opacity: 0.9; }
+
+        /* 4. Highlights Section */
+        .highlights-box {
+            background-color: #3C2A21;
+            border-radius: 12px;
+            overflow: hidden;
+            max-width: 500px;
+            margin: 0 auto 30px;
+            text-align: left;
+        }
+
+        .highlights-header {
+            padding: 10px 15px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .highlights-box ul {
+            background-color: white;
+            color: #333;
+            padding: 20px 40px;
+            list-style: none;
+        }
+
+        .highlights-box li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .highlights-box li::before {
+            content: '✓';
+            position: absolute;
+            left: -25px;
+            color: #3C2A21;
+        }
+
+        /* 5. Reflections & Images */
+        .bottom-section {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .reflections-content { flex: 1; }
+        
+        .reflections-content h4 { 
+            margin-bottom: 10px; 
+            display: flex; 
+            align-items: center; 
+            gap: 10px;
+        }
+
+        .entry-image {
+            width: 300px;
+            height: 200px;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        @media (max-width: 768px) {
+            .bottom-section { flex-direction: column; }
+            .entry-image { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Diary Entries</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="diary.html">Diary</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        
+        <!-- Entry 1 -->
+        <div class="outer-frame">
+            <article class="diary-card">
+                <div class="date-badge">August 22, 2023</div>
+                <h3>My First Day</h3>
+                <p class="intro-text">Today I started my College journey. I felt excited and nervous!<br>Exam week!</p>
+
+                <div class="highlights-box">
+                    <div class="highlights-header">📅 Today's Highlights</div>
+                    <ul>
+                        <li>Attended the orientation and toured the campus.</li>
+                        <li>Met Nicole, Angel, and Myla, who were really friendly.</li>
+                        <li>Signed up for several clubs and events.</li>
+                    </ul>
+                </div>
+
+                <div class="bottom-section">
+                    <div class="reflections-content">
+                        <h4>💡 Reflections</h4>
+                        <p>I realized that college will be challenging but exciting. I'll need to manage my time well and stay organized. Looking forward to learning more!</p>
+                    </div>
+                    <img src="laro.jpg" alt="Journaling" class="entry-image">
+                </div>
+            </article>
+        </div>
+
+        <!-- Entry 2 -->
+        <div class="outer-frame">
+            <article class="diary-card">
+                <div class="date-badge">September 05, 2023</div>
+                <h3>My First Day</h3> <!-- Title kept as per your screenshot -->
+                <p class="intro-text">Today I started my College journey. I felt excited and nervous!<br>Exam week!</p>
+
+                <div class="highlights-box">
+                    <div class="highlights-header">📅 Today's Highlights</div>
+                    <ul>
+                        <li>Met and get to know a lot about my classmates.</li>
+                        <li>It was unforgettable moments of me being freshman.</li>
+                        <li>Collaborating on our first group projects.</li>
+                    </ul>
+                </div>
+
+                <div class="bottom-section">
+                    <div class="reflections-content">
+                        <h4>💡 Reflections</h4>
+                        <p>I realized that college will be challenging but exciting. I'll need to manage my time well and stay organized. Looking forward to learning more!</p>
+                    </div>
+                    <img src="eat.jpg" alt="Friends" class="entry-image">
+                </div>
+            </article>
+        </div>
+
+    </main>
+
+</body>
+</html>
